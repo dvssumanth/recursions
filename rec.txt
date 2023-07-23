@@ -1,0 +1,233 @@
+'''def prime(n,i):
+    if i==n//2+1:
+        return True
+    if n%i==0:
+        return False
+    return prime(n,i+1)
+n=5
+if prime(n,2):
+    print('prime')'''#prime
+'''def niven(n):
+    if n==0:
+        return 0
+    return (n%10)+niven(n//10)
+n=12
+if (n%niven(n)==0):
+    print('niven')
+else:
+    print('not')'''#niven
+'''def arm(n,p):
+    if n==0:
+        return 0
+    return (n%10)**p+arm(n//10,p)
+n=153
+if(arm(n,len(str(n)))==n):
+    print('armstr')
+else:
+    print('not')'''#arm
+
+'''def fact(n):
+    add=0
+    while(n!=0):
+        rem=n%10
+        f=1
+        for i in range(1,rem+1):
+            f*=i
+        add+=f
+        n//=10
+    return add
+n=145
+if(fact(n)==n):
+    print('fa')
+else:
+    print('not')'''
+        
+'''def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+def strong(n):
+    if n==0:
+        return 0
+    return fact(n%10)+strong(n//10)
+n=145
+if(strong(n)==n):
+    print('str')'''#strong
+    
+
+'''def perfect(n,c,i):
+    if i==n//2+1:
+        return c==n
+    if n%i==0:
+        c+=i
+    return perfect(n,c,i+1)
+n=28
+if perfect(n,0,1):
+    print('perfect')
+else:
+    print('not')'''#perfect
+
+'''def add(n,a):
+    if n==0:
+        return 0
+    return (n%10)+add(n//10,a)
+def mul(n,m):
+    if n==1:
+        return 1
+    return (n%10)*mul(n//10,m)
+n=123
+if(add(n,0)==mul(n,1)):
+    print('spy')'''#spy
+
+'''def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+n=5
+print(fact(n))'''#fact
+
+'''def palin(n,rev):
+    if n==0:
+        return rev
+    return (n%10)*rev+palin(n//10,rev//10)
+n=121
+if(palin(n,100)==n):
+    print('pali')
+else:
+    print('not')'''
+'''def pali(n,r):
+    if n==0:
+        return 0
+    return (n%10)*r+pali(n//10,r//10)
+def prime(n,i):
+    if i==n//2+1:
+        return True
+    if n%i==0:
+        return False
+    return prime(n,i+1)
+n=13
+l=len(str(n))-1
+if(pali(n,10**l)!=n) and prime(n,2) and prime(pali(n,10**l),2):
+    print('emrip')
+else:
+    print('not')'''#emrip
+'''def pali(n,x):
+    if n==0:
+        return 0
+    return (n%10)*x+pali(n//10,x//10)
+n=121
+l=len(str(n))-1
+if(pali(n,10**l)==n):
+    print('pali')'''
+
+'''n=int(input('enter nm :'))
+c=0
+while(n!=0):
+    rem=n%2
+    if rem==1:
+        c+=1
+    n//=2
+if c%2==0:
+    print('evil')'''
+
+
+'''def evil(n,c):
+    if n==0:
+        return 0
+    if rem==1:
+        c+=1
+    return (n%10)+evil(n//2,c)
+n=15
+if(evil(n,0)%2==0):
+   print('evi')
+else:
+    print('not')'''#evil
+
+'''def fasc(n):
+    s=str(n*1)+str(n*2)+str(n*3)
+    for i in range(1,10):
+        if str(i) not in s:
+            return False
+    return True
+n=327
+if(fasc(n)):
+    print('fassc')
+else:
+    print('not')'''
+                    
+'''def fasc(s,n):
+    if n==10:
+        return True
+    if str(i) not in s:
+        return False
+    return fasc(s,n+1)
+n=327
+s=str(n*1)+str(n*2)+str(n*3)
+if(fasc(s,1)):
+    print('fasc')
+else:
+    print('not')'''
+
+
+'''def pronic(n,p):
+    if p==1:
+        return True
+    if i*(i+1)==n:
+        p=1
+    return pronic(n,p)
+n=6
+if pronic(n,0):
+    print('pronic')
+else:
+    print('not')'''#pronic
+
+
+    
+'''def add(n):
+    if n==0:
+        return 0
+    return (n%10)**2+add(n//10)
+def happy(n):
+    if n<10:
+        return n
+    return happy(add(n))
+n=17
+if(happy(n)==1):
+    print('happy')
+else:
+    print('not')'''#happy
+
+'''def tri(n,cub):
+    if n==0:
+        return True
+    if (n%10)!=(cub%10):
+        return False
+    return tri(n//10,cub//10)
+n=25
+if tri(n,n**3):
+    print('tri')
+else:
+    print('not')'''#tri
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
